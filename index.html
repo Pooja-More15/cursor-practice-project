@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My First Cursor Project</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="card">
+      <p class="eyebrow">Learning Cursor</p>
+      <h1>Hello, I'm learning Cursor AI</h1>
+      <p>
+        This is a simple first page. You can ask Cursor to change the
+        heading, colors, or add a new section.
+      </p>
+      <button type="button" id="hello-button">Say hello</button>
+      <p id="message" class="message" hidden>Nice work. You clicked the button!</p>
+    </main>
+
+    <script>
+      const button = document.getElementById("hello-button");
+      const message = document.getElementById("message");
+
+      button.addEventListener("click", function () {
+        message.hidden = false;
+      });
+    </script>
+  </body>
+</html>
