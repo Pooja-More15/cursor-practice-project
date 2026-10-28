@@ -13,7 +13,7 @@ body {
 }
 
 .card {
-  width: min(90%, 520px);
+  width: min(90%, 440px);
   padding: 32px;
   background: #fff;
   border-radius: 16px;
@@ -29,13 +29,29 @@ body {
 }
 
 h1 {
-  margin: 0 0 12px;
+  margin: 0 0 8px;
   font-size: 28px;
 }
 
-p {
+.hint {
   margin: 0 0 20px;
-  line-height: 1.5;
+  color: #5b7083;
+}
+
+label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 12px;
+  border: 1px solid #d9e2ec;
+  border-radius: 8px;
+  font-size: 16px;
 }
 
 button {
@@ -52,7 +68,21 @@ button:hover {
   background: #1d4ed8;
 }
 
-.message {
+.status {
   margin: 16px 0 0;
   font-weight: bold;
+}
+
+.status.error {
+  color: #b91c1c;
+}
+
+.profile {
+  margin: 16px 0 0;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 8px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
 }
