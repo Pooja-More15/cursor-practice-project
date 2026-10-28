@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JWT Login</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="card">
+      <p class="eyebrow">Java 21 + Spring Boot</p>
+      <h1>JWT login</h1>
+      <p class="hint">Demo account: <code>demo</code> / <code>password123</code></p>
+
+      <form id="login-form">
+        <label>
+          Username
+          <input id="username" name="username" value="demo" autocomplete="username" required />
+        </label>
+        <label>
+          Password
+          <input
+            id="password"
+            name="password"
+            type="password"
+            value="password123"
+            autocomplete="current-password"
+            required
+          />
+        </label>
+        <button type="submit">Log in</button>
+      </form>
+
+      <p id="status" class="status" hidden></p>
+      <pre id="profile" class="profile" hidden></pre>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

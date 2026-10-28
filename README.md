@@ -1,21 +1,31 @@
-﻿# Cursor Practice Project
+﻿# JWT login (Java 21)
 
-This is a beginner-friendly first project for learning Cursor.
+A small Spring Boot app that logs a user in and returns a JWT. Protected APIs need that token in the `Authorization` header.
 
-## What is here?
+## Versions
 
-- `index.html` — the webpage (text, heading, and a button)
-- `styles.css` — the look of the page (colors, spacing, layout)
+- Java 21
+- Spring Boot 4.1.2 (current stable for this JDK)
 
-## How to open it
+## How to run
 
-1. In Cursor, find `index.html` in the file list on the left.
-2. Right-click the file and choose **Open with Live Server**, or open the file in any web browser.
+Maven is not required on your PATH. Use the wrapper:
 
-## Try this next in Cursor Chat
+```
+.\mvnw.cmd spring-boot:run
+```
 
-Ask Cursor things like:
+Then open http://localhost:8080
 
-- Change the heading to my name
-- Make the background color light blue
-- Add a second button
+Demo login:
+
+- username: `demo`
+- password: `password123`
+
+## What happens on login
+
+1. `POST /api/auth/login` checks the username and password.
+2. The server signs a JWT (HS256) and returns it.
+3. `GET /api/me` requires `Authorization: Bearer <token>`.
+
+You can also register a new user with `POST /api/auth/register`.

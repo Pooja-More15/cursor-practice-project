@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:authdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+
+app:
+  jwt:
+    # Local demo secret only. Must be at least 32 characters for HS256.
+    secret: cursor-practice-jwt-hs256-secret-key
+    issuer: jwt-login
+    expiration: 1h
